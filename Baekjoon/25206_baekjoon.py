@@ -1,4 +1,3 @@
-n = 20
 subjectDic = {
   "A+" : 4.5,
   "A0" : 4,
@@ -12,14 +11,11 @@ subjectDic = {
 }
 
 "(학점 × 과목평점)의 합을 학점의 총합으로 나눈 값"
-sum1 = 0
-sum2 = 0
+sum1 = 0 #학점 * 과목평점
+sum2 = 0 #힉점의 총합
 for i in range(20):
   s = input().split()
-  if s[-1] == "P" :
-    n -= 1
-  else:
+  if s[-1] != "P" :
     sum1 += float(s[1]) * subjectDic[s[-1]]
-    sum2 += float(s[1])
-
+    sum2 += float(s[1])    
 print(sum1/sum2)
